@@ -27,19 +27,19 @@ public class LinkedList {
         4 -> 3 -> 2 -> 1 -> NULL       5 -> NULL
         5 -> 4 -> 3 -> 2 -> 1 -> NULL  NULL
      */
-    Node reverse(Node node)
+    Node reverse(Node head)
     {
         Node prevNode = null;
-        Node current = node;
+        Node current = head; // start with the head node.
         Node nextNode = null;
         while (current != null) {
             nextNode = current.next;
-            current.next = prevNode;
+            current.next = prevNode; // to detach the first node of the rest of nodes in each iteration.
             prevNode = current;
             current = nextNode;
         }
-        node = prevNode;
-        return node;
+        head = prevNode;
+        return head;
     }
 
     // prints content of double linked list
@@ -61,7 +61,7 @@ public class LinkedList {
         list.head.next.next.next = new Node(20);
 
         System.out.println("Given linked list");
-        list.printList(head);
+        list.printList(head); // I'm passing the head only but remember, it's pointing to all attached next elements.
         head = list.reverse(head);
         System.out.println("");
         System.out.println("Reversed linked list ");

@@ -1,7 +1,7 @@
 package Week1.y2024.section9;
 
 // https://leetcode.com/problems/reverse-linked-list-ii
-public class LinkedList_IterativeLinkReversal {
+public class LinkedListCycle1 {
 
     static Node head;
 
@@ -58,7 +58,7 @@ public class LinkedList_IterativeLinkReversal {
         return head;
     }
 
-    void printLinkedList(LinkedList_IterativeLinkReversal.Node head){
+    void printLinkedList(LinkedListCycle1.Node head){
 
         while(head!=null){
             System.out.print(head.data + " ");
@@ -67,13 +67,13 @@ public class LinkedList_IterativeLinkReversal {
     }
 
     public static void main(String[] args) {
-        LinkedList_IterativeLinkReversal nodesList = new LinkedList_IterativeLinkReversal();
-        head = new LinkedList_IterativeLinkReversal.Node(10);
-        head.next = new LinkedList_IterativeLinkReversal.Node(44);
-        head.next.next = new LinkedList_IterativeLinkReversal.Node(16);
-        head.next.next.next = new LinkedList_IterativeLinkReversal.Node(50);
-        head.next.next.next.next = new LinkedList_IterativeLinkReversal.Node(3);
-        head.next.next.next.next.next = new LinkedList_IterativeLinkReversal.Node(31);
+        LinkedListCycle1 nodesList = new LinkedListCycle1();
+        head = new LinkedListCycle1.Node(10);
+        head.next = new LinkedListCycle1.Node(44);
+        head.next.next = new LinkedListCycle1.Node(16);
+        head.next.next.next = new LinkedListCycle1.Node(50);
+        head.next.next.next.next = new LinkedListCycle1.Node(3);
+        head.next.next.next.next.next = new LinkedListCycle1.Node(31);
 
         System.out.println("LinkedList before reverse: ");
         nodesList.printLinkedList(head);
